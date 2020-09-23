@@ -14,7 +14,7 @@ class Signup extends React.Component {
         this.handleError = this.handleError.bind(this);
     }
     componentDidMount() {
-        fetch('http://localhost:3000/server/users')
+        fetch('/server/users')
         .then(response => {
             if (response.status === 200) {
                 response.json()
@@ -38,7 +38,7 @@ class Signup extends React.Component {
 
     }
     handleSignup(user) {
-        fetch('http://localhost:3000/server/users', {
+        fetch('/server/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
