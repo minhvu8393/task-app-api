@@ -1,0 +1,19 @@
+.logout {
+    color:white;
+    font-size: $sm-size;
+    text-align: center;
+}
+
+.logout__user {
+    display: inline;
+    margin-right: 2rem;
+}
+
+.logout__button {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 1rem;
+    border: 0rem;
+    background-color: $light-slate-gray;
+    margin: 0;
+}

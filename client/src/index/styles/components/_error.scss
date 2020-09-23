@@ -1,0 +1,13 @@
+.error {
+    font-size: $sm-size;
+    border-radius: 0.5rem;
+    background-color: red;
+    border: 0rem;
+    width: 30rem;
+    color: white;
+}
+
+.error__text {
+    padding: 1rem 0.5rem;
+    text-align: center;
+}

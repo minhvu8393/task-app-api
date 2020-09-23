@@ -1,0 +1,23 @@
+.addTask {
+    color: white;
+    font-size: $sm-size;
+    margin: 4rem 0;
+}
+
+.addTask__input {
+    background-color: $dark-jungle-green;
+    width: 100%;
+    height: 3rem;
+    border: 0rem;
+    border-bottom: 0.1rem solid $sage;
+    color:white;
+}
+
+.addTask__button {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 1rem;
+    border: 0rem;
+    background-color: $sage;
+    margin-top: 2.5rem;
+}

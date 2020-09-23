@@ -1,0 +1,25 @@
+.task {
+    color: white;
+    font-size: $sm-size;
+    background-color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.task__button {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 1rem;
+    border: 0rem;
+    background-color: $sage;
+    margin-right: 0.5rem;
+}
+
+.task__title {
+    font-size: $md-size;
+}
+
+.task__title__done {
+    text-decoration: line-through;
+}
