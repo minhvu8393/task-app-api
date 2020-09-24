@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap);
+@import './settings.scss';
 
 $background-color: #182825;
 
@@ -9,4 +10,15 @@ html {
 body {
     background-color: $background-color;
     font-family: 'Nanum Gothic', sans-serif;
+}
+
+input:focus {
+    background-color: $sage;
+    outline: none;
+}
+
+button:active {
+    outline: none;
+    border: none;
+    background-color: $pacific-blue;
 }

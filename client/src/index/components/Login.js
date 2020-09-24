@@ -30,10 +30,10 @@ const Login = function (props) {
                     </label>
                 </div>
                 <button className="login__button">Submit</button>
-                <button className="login__button" onClick={() => {
+            </form>
+            <button className="login__button" onClick={() => {
                     window.location.href = '/signup'
                 }}>Sign Up</button>
-            </form>
         </div>
     )
 }
