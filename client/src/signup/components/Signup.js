@@ -83,9 +83,13 @@ class Signup extends React.Component {
                 {this.state.loggedIn ? 
                     window.location.href = "/" :
                     <div>
-                        <Header />
-                        <SignupForm handleError={this.handleError} handleSignup={this.handleSignup} />
-                        <Error error={this.state.error}/>
+                        <div>
+                            <Header />
+                        </div>
+                        <div className="container container-content">
+                            <SignupForm handleError={this.handleError} handleSignup={this.handleSignup} />
+                            <Error error={this.state.error}/>
+                        </div>
                     </div>
                 }
             </div>

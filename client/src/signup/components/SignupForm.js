@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const SignupForm = function(props) {
     return (
-        <div>
+        <div className="signup">
             <form onSubmit={(e) => {
                 e.preventDefault();
                 if (!e.target.name.value) {
@@ -24,18 +24,21 @@ const SignupForm = function(props) {
                 props.handleSignup(user);
             }}>
                 <label>
-                    Name:
-                    <input name="name"></input>
+                    <p>Name</p>
+                    <input className="signup__input" name="name"></input>
                 </label>
                 <label>
-                    Email:
-                    <input name="email"></input>
+                    <p>Email</p>
+                    <input className="signup__input" name="email"></input>
                 </label>
                 <label>
-                    Password:
-                    <input name="password" type="password"></input>
+                    <p>Password</p>
+                    <input className="signup__input" name="password" type="password"></input>
                 </label>
-                <button>Submit</button>
+                <div>
+                    <button className="signup__button">Submit</button>
+                </div>
+
             </form>
         </div>
     )

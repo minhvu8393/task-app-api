@@ -5,6 +5,12 @@ const Login = function (props) {
         <div className='login' >
             <form onSubmit={(e) => {
             e.preventDefault();
+            if (!e.target.email.value) {
+                return props.handleError({error: "Please Input Email"})
+            }
+            if (!e.target.password.value) {
+                return props.handleError({error: "Please Input Password"})
+            }
             let value = {
                 email: e.target.email.value,
                 password: e.target.password.value,

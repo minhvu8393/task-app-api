@@ -44,19 +44,23 @@ class TodoApp extends React.Component {
             },
             body: user
         })
-        .then(response => response.json())
-        .then(result => {
-            if (result.user) {
-                this.setState(() => {
-                    return {
-                        user: result.user,
-                        tasks: result.user.tasks
-                    }
+        .then(response => {
+            if (response.status === 200) {
+                response.json()
+                .then((result) => {
+                    this.setState(() => {
+                        return {
+                            user: result.user,
+                            tasks: result.user.tasks,
+                            error: null
+                        }
+                    })
                 })
             } else {
-                return result.error
+                this.handleError({error: "Wrong Email or Password"})
             }
         })
+
     }
     handleLogout() {
         fetch('/server/users/logout', {
@@ -69,6 +73,7 @@ class TodoApp extends React.Component {
                     return {
                         user : '',
                         tasks: [],
+                        error: null
                     }
                 })
             }
@@ -190,8 +195,12 @@ class TodoApp extends React.Component {
                             <AddTask handleError={this.handleError} handleAddTask={this.handleAddTask}/>
                             <Error error={this.state.error}/>
                             <Tasks handleCompletedTask={this.handleCompletedTask} handleRemoveTask={this.handleRemoveTask} tasks={this.state.tasks}/>                          
-                        </div> :
-                        <Login handleLogin={this.handleLogin}/>
+                        </div> 
+                        :
+                        <div>
+                            <Login handleError={this.handleError} handleLogin={this.handleLogin}/>
+                            <Error error={this.state.error}/>
+                        </div>
                     }
                 </div>
             </div>
