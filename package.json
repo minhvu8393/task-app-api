@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -r dotenv/config server/src/app.js dotenv_config_path=server/config/dev.env",
     "start": "node server/src/app.js",
-    "build": "webpack"
+    "build-dev": "webpack --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -39,8 +40,10 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
+    "mini-css-extract-plugin": "^0.11.2",
     "nodemon": "^2.0.4",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.4"
   }
 }

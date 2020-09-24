@@ -1,6 +1,4 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -36,8 +34,5 @@ module.exports = {
                 test: /\.s?css$/
             }
         ]
-    },
-    mode: 'production',
-
-    devtool: 'cheap-module-eval-source-map'
+    }
 }
