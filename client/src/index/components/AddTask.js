@@ -14,7 +14,7 @@ const AddTask = function(props) {
                     description: e.target.description.value
                 }
                 e.target.title.value = '';
-                e.target.description = '';
+                e.target.description.value = '';
                 props.handleAddTask(JSON.stringify(task));
             }}>
                 <div>
