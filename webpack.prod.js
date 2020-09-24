@@ -36,19 +36,5 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({ "process.env.NODE_ENV": JSON.stringify("production") }),
         new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css',
-          }),
         ],
-    module: {
-        rules: [
-            {
-            test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            },
-        ],
-    },
-    devtool: 'source-map',
-        
 })
